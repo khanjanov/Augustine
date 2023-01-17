@@ -1,0 +1,44 @@
+#header {
+  width: 100%;
+  background-color: $secondary-color;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  .container {
+    .wrapper {
+      width: 100%;
+      @include d_flex_sb;
+      padding: 0 80px;
+      @include mobile {
+        padding: 0;
+      }
+      &__burgerm {
+        display: none;
+        @include mobile {
+          display: block;
+        }
+      }
+      &__navs {
+        @include d_flex_sb;
+        gap: 24px;
+        font-size: 14px;
+        font-family: $fontfam2;
+        font-weight: $fw4;
+        @include mobile {
+          display: none;
+        }
+        div {
+          a {
+            color: $base-color;
+            font-weight: $fw4;
+            &:hover {
+              border-bottom: 1px solid $base-color;
+              padding-bottom: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,269 @@
+#main {
+  .section1 {
+    background-color: $base-color;
+    color: $secondary-color;
+    padding: 16px 0;
+    margin-top: 70px;
+    @include mobile {
+      margin-top: 80px;
+    }
+    .container {
+      .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        %text {
+          font-size: 16px;
+          font-weight: $fw4;
+          font-family: $fontfam2;
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+        &__text {
+          @extend %text;
+        }
+        a {
+          @extend %text;
+          color: $secondary-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .section2 {
+    background-color: $third-color;
+    .container {
+      .wrapper {
+        width: 100%;
+        display: flex;
+        place-content: center;
+        gap: 40px;
+        @include mobile {
+          @include d_flex_sb_fdc;
+          padding: 40px 0;
+        }
+        &__left {
+          display: flex;
+          order: 2;
+          img {
+            width: 500px;
+            height: 588px;
+            @include mobile {
+              width: 360px;
+              height: 400px;
+            }
+          }
+        }
+        &__right {
+          color: $secondary-color;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          place-content: center;
+          gap: 40px;
+          order: 2;
+          @include mobile {
+            order: 1;
+            width: 100%;
+          }
+          &__tittle {
+            h4 {
+              font-family: $fontfam1;
+              font-size: 48px;
+              font-weight: $fw4;
+              @include mobile {
+                font-size: 28px;
+              }
+            }
+          }
+          &__text {
+            font-family: $fontfam2;
+            font-size: 16px;
+          }
+          &__button {
+            @include button($secondary-color);
+            a {
+              @include buttons_a($base-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .section3 {
+    .container {
+      .wrapper {
+        width: 100%;
+        color: $base-color;
+        display: flex;
+        place-content: center;
+        padding: 60px 80px;
+        gap: 40px;
+        @include mobile {
+          @include d_flex_sb_fdc;
+          padding: 40px 0;
+        }
+        &__left {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          place-content: center;
+          gap: 40px;
+          @include mobile {
+            width: 100%;
+          }
+          &__tittle {
+            h6 {
+              font-size: 40px;
+              font-weight: $fw4;
+              font-family: $fontfam1;
+            }
+          }
+          &__button {
+            @include button($base-color);
+            a {
+              @include buttons_a($secondary-color);
+            }
+          }
+        }
+        &__right {
+          display: flex;
+          gap: 12px;
+          @include mobile {
+            flex-direction: column;
+          }
+          img {
+            width: 220px;
+            height: 420px;
+            @include mobile {
+              width: 350px;
+              height: 500px;
+            }
+          }
+          .order {
+            @include mobile {
+              order: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .section4 {
+    width: 100%;
+    background-image: url(../pics/sunset.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 200px 0;
+    .container {
+      .wrapper {
+        width: 100%;
+        div {
+          text-align: center;
+          h3 {
+            color: $secondary-color;
+            font-size: 48px;
+            font-family: $fontfam1;
+          }
+        }
+      }
+    }
+  }
+  .section5 {
+    .container {
+      .wrapper {
+        width: 100%;
+        display: flex;
+        gap: 24px;
+        padding: 60px 0;
+        @include mobile {
+          flex-direction: column;
+        }
+        &__cards {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+          h5 {
+            font-size: 28px;
+            font-weight: fw5;
+            font-family: $fontfam1;
+          }
+          p {
+            font-size: 16px;
+            font-weight: $fw5;
+            font-family: $fontfam2;
+          }
+          &__button {
+            @include button($base-color);
+            a {
+              @include buttons_a($secondary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .section6 {
+    width: 100%;
+    background-image: url(../pics/twogirl.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .container {
+      .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 80px;
+        @include mobile {
+          padding: 40px 0;
+          gap: 20px;
+        }
+        h4 {
+          color: $secondary-color;
+          font-size: 28px;
+          font-weight: $fw5;
+          font-family: $fontfam1;
+          @include mobile {
+            font-size: 20px;
+          }
+        }
+        h1 {
+          color: $secondary-color;
+          font-size: 64px;
+          font-weight: $fw5;
+          font-family: $fontfam1;
+          @include mobile {
+            font-size: 40px;
+          }
+        }
+        &__form {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          input {
+            padding: 12px 64px 12px 12px;
+          }
+          &__button {
+            @include button($base-color);
+            a {
+              @include buttons_a($secondary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

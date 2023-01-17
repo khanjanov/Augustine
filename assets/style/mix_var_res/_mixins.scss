@@ -1,0 +1,35 @@
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin d_flex_sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin d_flex_sb_fdc {
+  @include d_flex_sb;
+  flex-direction: column;
+}
+@mixin center {
+  width: 1250px;
+  margin: 0 auto;
+}
+@mixin grid($rt, $fr, $gap) {
+  display: grid;
+  grid-template-columns: repeat($rt, $fr fr);
+  gap: $gap px;
+}
+
+@mixin button($bgc) {
+  background-color: $bgc;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+@mixin buttons_a($color) {
+  font-size: 14px;
+  font-weight: $fw4;
+  font-family: $fontfam2;
+  color: $color;
+}
